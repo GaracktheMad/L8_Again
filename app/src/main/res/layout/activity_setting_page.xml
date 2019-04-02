@@ -14,7 +14,7 @@
         android:layout_marginTop="37dp"
         android:layout_marginEnd="53dp"
         android:layout_marginBottom="644dp"
-        android:text="+"
+        android:text="@string/addMe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
