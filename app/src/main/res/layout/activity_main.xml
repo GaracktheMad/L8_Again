@@ -13,16 +13,13 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="586dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
         android:background="@android:color/holo_orange_dark"
         android:text="@string/late"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/setBtn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/setBtn"
@@ -31,9 +28,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="584dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
         android:text="@string/set"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lateBtn"
         app:layout_constraintTop_toTopOf="parent" />
@@ -94,6 +89,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        />
 
 </android.support.constraint.ConstraintLayout>

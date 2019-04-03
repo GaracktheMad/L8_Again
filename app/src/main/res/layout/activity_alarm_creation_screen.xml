@@ -4,4 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlarmScreenActivity"/>
+    tools:context=".alarm_creation_screen">
+
+</android.support.constraint.ConstraintLayout>
