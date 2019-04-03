@@ -22,8 +22,8 @@ Roles:
 ### location(s) - if we use the work GPS.
 ### Critical path (for class) integration of GPS with in application. 
 ### Time permitting - maybe we also allow/force them to enter GPS (address of work) to keep them honest?? 
-### Front end development - (Need two volunteers)
-### Back end development - Peter & (Need a volunteer)
+### Front end development - Jeami & Brandon
+### Back end development - Peter & Brandon
 ### AWS development - Craig Reino & Peter
-### Project/Product development - Craig Reino & (Need a volunteer)
-### Marketing/Demo for Presentation - Craig Reino & (Need a volunteer)
+### Project/Product development - Craig Reino & Wyatt
+### Marketing/Demo for Presentation - Craig Reino & Wyatt

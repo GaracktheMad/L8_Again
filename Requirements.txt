@@ -1,0 +1,16 @@
+REQUIREMENTS:
+Must Have:
+Clock
+Record instances of late and ontime
+Progress bar
+At least 5 alarms
+GPS or step based alarm unlocking
+Locking of snooze
+
+Would Like: 
+GPS Alarm
+Alexa Integration
+Custom number of alarms
+
+Stretch:
+AI integrated dynamic insult or compliment generation
