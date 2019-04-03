@@ -1,12 +1,11 @@
 # L8_Again
-## A better alarm clock
+## A better alarm clock, with an attitude!
 
 Roles:
   Jeami - Front end (Open to helping wherever needed)
   Wyatt - Comfortable anywhere needed, Do not know how to use AWS but will learn if needed.
   Peter - Backend
-  # L8_Again
-## A better alarm clock, with an attitude!
+
 ### Are you tired of being late?
 ### Wish you had a solution?
 ### Well I think we have the alarm clock for you.
@@ -25,6 +24,6 @@ Roles:
 ### Time permitting - maybe we also allow/force them to enter GPS (address of work) to keep them honest?? 
 ### Front end development - (Need two volunteers)
 ### Back end development - Peter & (Need a volunteer)
-### AWS development - Craig Reino & (Need a volunteer)
+### AWS development - Craig Reino & Peter
 ### Project/Product development - Craig Reino & (Need a volunteer)
 ### Marketing/Demo for Presentation - Craig Reino & (Need a volunteer)
