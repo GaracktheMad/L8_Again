@@ -41,6 +41,9 @@ Frame containers for five alarm clocks (kayout_height = 139.6dp)
 
 
 On activity Two: "activity_setting_page.xml"
+**Top frame has one button to take back to the activity_alarm_screen.xml
+	btnAlarms
+
 Check boxes within each Frame for each alarm: 
    -checks what days of the week the alarm will go off
 	chkMonA1 <--CheckBox Monday Alarm One
@@ -50,4 +53,13 @@ Check boxes within each Frame for each alarm:
 	chkFriA1
 	chkSatA1
 	chkSunA1
+	**Rest of them are in same format
+
+    -Text time box (to set the times for the alarms)
+	txtTimeA1
+	txtTimeA2
+	txtTimeA3
+	txtTimeA4
+	txtTimeA5
+	
 
