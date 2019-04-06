@@ -59,7 +59,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_gravity="bottom|fill_horizontal"
+                    android:layout_gravity="fill_horizontal"
                     android:orientation="horizontal">
 
                     <CheckBox
@@ -67,6 +67,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Mon"
                         android:textColor="@android:color/background_light" />
 
@@ -75,6 +76,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Tues"
                         android:textColor="@android:color/background_light" />
 
@@ -83,6 +85,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Weds"
                         android:textColor="@android:color/background_light" />
 
@@ -91,6 +94,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Thurs"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -105,6 +109,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Fri"
                         android:textColor="@android:color/background_light" />
 
@@ -113,6 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sat"
                         android:textColor="@android:color/background_light" />
 
@@ -121,6 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sun"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -167,6 +174,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Mon"
                         android:textColor="@android:color/background_light" />
 
@@ -175,6 +183,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Tues"
                         android:textColor="@android:color/background_light" />
 
@@ -183,6 +192,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Weds"
                         android:textColor="@android:color/background_light" />
 
@@ -191,6 +201,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Thurs"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -205,6 +216,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Fri"
                         android:textColor="@android:color/background_light" />
 
@@ -213,6 +225,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sat"
                         android:textColor="@android:color/background_light" />
 
@@ -221,6 +234,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sun"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -269,6 +283,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Mon"
                         android:textColor="@android:color/background_light" />
 
@@ -277,6 +292,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Tues"
                         android:textColor="@android:color/background_light" />
 
@@ -285,6 +301,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Weds"
                         android:textColor="@android:color/background_light" />
 
@@ -293,6 +310,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Thurs"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -307,6 +325,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Fri"
                         android:textColor="@android:color/background_light" />
 
@@ -315,6 +334,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sat"
                         android:textColor="@android:color/background_light" />
 
@@ -323,6 +343,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sun"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -371,6 +392,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Mon"
                         android:textColor="@android:color/background_light" />
 
@@ -379,6 +401,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Tues"
                         android:textColor="@android:color/background_light" />
 
@@ -387,6 +410,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Weds"
                         android:textColor="@android:color/background_light" />
 
@@ -395,6 +419,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Thurs"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -409,6 +434,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Fri"
                         android:textColor="@android:color/background_light" />
 
@@ -417,6 +443,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sat"
                         android:textColor="@android:color/background_light" />
 
@@ -425,6 +452,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sun"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -473,6 +501,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Mon"
                         android:textColor="@android:color/background_light" />
 
@@ -481,6 +510,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Tues"
                         android:textColor="@android:color/background_light" />
 
@@ -489,6 +519,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Weds"
                         android:textColor="@android:color/background_light" />
 
@@ -497,6 +528,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Thurs"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
@@ -511,6 +543,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Fri"
                         android:textColor="@android:color/background_light" />
 
@@ -519,6 +552,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sat"
                         android:textColor="@android:color/background_light" />
 
@@ -527,6 +561,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
                         android:text="Sun"
                         android:textColor="@android:color/background_light" />
                 </LinearLayout>
