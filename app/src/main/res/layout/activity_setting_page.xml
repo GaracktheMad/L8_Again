@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".SettingPage">
 
     <LinearLayout
@@ -20,48 +21,93 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <FrameLayout
+            android:id="@+id/frameButtons"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none">
+
+            <Button
+                android:id="@+id/btnAlarms"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="Alarms" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
+
+        <FrameLayout
             android:id="@+id/alarmOneFrame"
             android:layout_width="match_parent"
-            android:layout_height="131dp">
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none" />
 
-            <Switch
-                android:id="@+id/switchA1"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
-                android:layout_gravity="right" />
-        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameL2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
 
         <FrameLayout
             android:id="@+id/alarmTwoFrame"
             android:layout_width="match_parent"
-            android:layout_height="129dp">
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark" />
 
-            <Switch
-                android:id="@+id/switchA2"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
-                android:layout_gravity="right" />
-        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameL3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
 
         <FrameLayout
             android:id="@+id/alarmThreeFrame"
             android:layout_width="match_parent"
-            android:layout_height="123dp">
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark" />
 
-        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameL4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
 
         <FrameLayout
             android:id="@+id/alarmFourFrame"
             android:layout_width="match_parent"
-            android:layout_height="145dp">
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark" />
 
-        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameL5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
 
         <FrameLayout
             android:id="@+id/alarmFiveFrame"
             android:layout_width="match_parent"
-            android:layout_height="170dp">
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark" />
 
-        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameL6"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
