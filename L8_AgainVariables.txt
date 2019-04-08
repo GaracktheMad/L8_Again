@@ -1,0 +1,77 @@
+**Variables for L8_Again**
+
+On activity Two: "activity_alarm_screen.xml"
+Frame containers for five alarm clocks
+    -Holds each alarm and the buttons to go back to main/ to settings
+	frameButtons (holds buttons to go back to main and to setting page)
+		-btnHome	(to activity_home.xml)
+		-btnSettings	(to activity_settings_page.xml)
+	alarmOneFrame
+	alarmTwoFrame
+	alarmThreeFrame
+	alarmFourFrame
+	alarmFiveFrame
+	**Random frameLine# are just for design purposes
+
+    	-Switches within each frame: 
+    	-Will toggle the alarms on/off
+		switchA1  <-- Switch Alarm One
+		switchA2
+		switchA3
+		switchA4
+		switchA5
+
+    -Will contain text that displays days of the week that alarm will go off
+	txtDaysA1
+	txtDaysA2
+	txtDaysA3
+	txtDaysA4
+	txtDaysA5
+	**Calls info from acitivity_setting_page through if statements
+
+    -Will contain text to display time alarm will go off
+    **Held in a horizantal linear layout
+	txtHourA1	txtMinsA1	txtAmPmA1
+	txtHourA2	txtMinsA2	txtAmPmA2
+	txtHourA3	txtMinsA3	txtAmPmA3
+	txtHourA4	txtMinsA4	txtAmPmA4
+	txtHourA5	txtMinsA5	txtAmPmA5
+	**Calls info from acitivity_setting_page
+	***All horizontal layouts also contain a text box with ":" for formatting
+
+
+On activity Two: "activity_setting_page.xml"
+**Top frame has one button to take back to the activity_alarm_screen.xml
+	btnAlarms	**Takes to activity_alarm_screen.xml
+
+Check boxes within each Frame for each alarm: 
+   -checks what days of the week the alarm will go off
+	chkMonA1 <--CheckBox Monday Alarm One
+	chkTuesA1
+	chkWedA1
+	chkThurA1
+	chkFriA1
+	chkSatA1
+	chkSunA1
+	**Rest of them are in same format
+
+    -Text time box (to set the times for the alarms)
+	txtTimeA1
+	txtTimeA2
+	txtTimeA3
+	txtTimeA4
+	txtTimeA5
+	
+on activity Three: "activity_main.xml"
+	**When alarm goes off this will open on start up of the app
+    -original buttons
+	snoozeBtn
+	onTimeBtn
+	lateBtn
+	alarmsBtn	**Will take to activity_alarm_screen.xml
+
+on activity Four: "activity_home.xml"
+	**Will have overall score
+	progBarOverall	**global variable, takes 
+
+
