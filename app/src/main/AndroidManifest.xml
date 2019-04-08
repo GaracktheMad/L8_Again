@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".alarm_creation_screen"></activity>
-        <activity android:name=".AlarmScreenActivity" />
+        <activity android:name=".AlarmScreenActivity"></activity>
         <activity android:name=".SettingPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,9 +19,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-feature android:name="android.hardware.location.gps" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
