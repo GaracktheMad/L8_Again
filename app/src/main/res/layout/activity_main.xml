@@ -92,4 +92,18 @@
         app:layout_constraintTop_toTopOf="parent"
         android:importantForAutofill="no" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="584dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="openHomeActivity"
+        android:text="Home Test"
+        app:layout_constraintEnd_toStartOf="@+id/alarmsBtn"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/lateBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
