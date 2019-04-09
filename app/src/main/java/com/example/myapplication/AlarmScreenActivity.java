@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class AlarmScreenActivity extends AppCompatActivity {
 
@@ -9,5 +11,15 @@ public class AlarmScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_screen);
+    }
+
+
+        public void openMainActivity(View view) {
+            Intent webIntent = new Intent(this, MainActivity.class);
+            startActivity(webIntent);
+    }
+    public void openSettingActivity(View view) {
+        Intent webIntent = new Intent(this, SettingPage.class);
+        startActivity(webIntent);
     }
 }
