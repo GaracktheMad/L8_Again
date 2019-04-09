@@ -134,13 +134,22 @@
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/txtTimeA1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:textColor="@android:color/background_light" />
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </FrameLayout>
+
         </FrameLayout>
 
         <FrameLayout
@@ -241,13 +250,6 @@
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/txtTimeA2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:textColor="@android:color/background_light" />
         </FrameLayout>
 
         <FrameLayout
@@ -350,13 +352,6 @@
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/txtTimeA3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:textColor="@android:color/background_light" />
         </FrameLayout>
 
         <FrameLayout
@@ -459,13 +454,6 @@
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/txtTimeA4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:textColor="@android:color/background_light" />
         </FrameLayout>
 
         <FrameLayout
@@ -568,13 +556,6 @@
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/txtTimeA5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:textColor="@android:color/background_light" />
         </FrameLayout>
 
         <FrameLayout

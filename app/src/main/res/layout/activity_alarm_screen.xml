@@ -69,7 +69,6 @@
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
                 android:gravity="center_vertical"
-                android:text="every weekday"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
 
@@ -85,7 +84,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="08"
                     android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
@@ -105,7 +103,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="35"
                     android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
@@ -115,7 +112,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="AM"
                     android:textColor="@android:color/background_light"
                     android:textSize="30sp" />
             </LinearLayout>
@@ -308,9 +304,10 @@
                     android:layout_width="65dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=""
+                    android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
                 <TextView
@@ -318,9 +315,10 @@
                     android:layout_width="10dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=":"
+                    android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
                 <TextView
@@ -328,9 +326,10 @@
                     android:layout_width="65dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=""
+                    android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
                 <TextView
@@ -338,9 +337,10 @@
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=""
+                    android:textColor="@android:color/background_light"
                     android:textSize="30sp" />
             </LinearLayout>
         </FrameLayout>
@@ -383,9 +383,10 @@
                     android:layout_width="65dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=""
+                    android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
                 <TextView
@@ -393,9 +394,10 @@
                     android:layout_width="10dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=":"
+                    android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
                 <TextView
@@ -403,9 +405,10 @@
                     android:layout_width="65dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=""
+                    android:textColor="@android:color/background_light"
                     android:textSize="36sp" />
 
                 <TextView
@@ -413,9 +416,10 @@
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@android:color/background_dark"
                     android:gravity="center"
                     android:text=""
+                    android:textColor="@android:color/background_light"
                     android:textSize="30sp" />
             </LinearLayout>
         </FrameLayout>
