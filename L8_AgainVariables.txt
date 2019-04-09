@@ -55,8 +55,10 @@ Check boxes within each Frame for each alarm:
 	chkSunA1
 	**Rest of them are in same format
 
-    -Text time box (to set the times for the alarms)
-	txtTimeA1
+    -Text time box (to set the times for the alarms) --SPinner (under containers)
+*200 X 70 dp	**65 dp (match parent) : --10dp mins 65 am/pm 60
+
+	spHourA1
 	txtTimeA2
 	txtTimeA3
 	txtTimeA4
@@ -73,5 +75,4 @@ on activity Three: "activity_main.xml"
 on activity Four: "activity_home.xml"
 	**Will have overall score
 	progBarOverall	**global variable, takes 
-
-
+	btnAlarmsPage
