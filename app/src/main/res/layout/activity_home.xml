@@ -55,6 +55,13 @@
             android:id="@+id/progBarOverall"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="174dp" />
+
+        <CalendarView
+            android:id="@+id/calendarView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+                />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

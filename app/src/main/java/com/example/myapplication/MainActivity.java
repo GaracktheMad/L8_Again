@@ -17,4 +17,9 @@ public class MainActivity extends AppCompatActivity {
             Intent webIntent = new Intent(this, AlarmScreenActivity.class);
             startActivity(webIntent);
     }
+
+    public void openHomeActivity(View view) {
+        Intent webIntent = new Intent(this, HomeActivity.class);
+        startActivity(webIntent);
+    }
 }
