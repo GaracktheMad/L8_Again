@@ -136,19 +136,41 @@
             </LinearLayout>
 
             <FrameLayout
+                android:id="@+id/frameSpinnerA1"
                 android:layout_width="200dp"
                 android:layout_height="60dp">
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="65dp"
-                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    <Spinner
+                        android:id="@+id/spHoursA1"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA1"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA1"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA1"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
             </FrameLayout>
 
         </FrameLayout>
@@ -250,6 +272,44 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameSpinnerA2"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA2"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA2"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA2"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA2"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
 
         </FrameLayout>
 
@@ -353,6 +413,44 @@
 
             </LinearLayout>
 
+            <FrameLayout
+                android:id="@+id/frameSpinnerA3"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA3"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA3"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA3"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA3"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
         </FrameLayout>
 
         <FrameLayout
@@ -455,6 +553,44 @@
 
             </LinearLayout>
 
+            <FrameLayout
+                android:id="@+id/frameSpinnerA4"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA4"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA4"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA4"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA4"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
         </FrameLayout>
 
         <FrameLayout
@@ -556,6 +692,44 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameSpinnerA5"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA5"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA5"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA5"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA5"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
 
         </FrameLayout>
 

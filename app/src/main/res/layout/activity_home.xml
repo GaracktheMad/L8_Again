@@ -21,6 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <Button
+                android:id="@+id/btnAlarmsPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:text="Alarms" />
+        </FrameLayout>
+
         <TextView
             android:id="@+id/txtHome"
             android:layout_width="match_parent"
@@ -29,12 +41,6 @@
             android:text="Welcome!"
             android:textColor="@android:color/background_light"
             android:textSize="30sp" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-        </FrameLayout>
 
         <TextView
             android:id="@+id/txtOverall"
@@ -47,8 +53,8 @@
 
         <ProgressBar
             android:id="@+id/progBarOverall"
-            style="?android:attr/progressBarStyle"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="174dp" />
+            android:layout_height="50dp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
