@@ -4,20 +4,740 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".SettingPage">
 
-    <Button
-        android:id="@+id/newAlarmBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="308dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="644dp"
-        android:text="@string/addMe"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameButtons"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none">
+
+            <Button
+                android:id="@+id/btnAlarms"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="Alarms"
+                android:onClick="openAlarmScreenActivity"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/alarmOneFrame"
+            android:layout_width="match_parent"
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|fill_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="fill_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkMonA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Mon"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkTuesA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Tues"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkWedA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Weds"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkThurA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Thurs"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkFriA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Fri"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSatA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sat"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSunA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sun"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameSpinnerA1"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA1"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA1"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA1"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA1"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/alarmTwoFrame"
+            android:layout_width="match_parent"
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|fill_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|fill_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkMonA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Mon"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkTuesA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Tues"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkWedA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Weds"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkThurA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Thurs"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkFriA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Fri"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSatA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sat"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSunA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sun"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameSpinnerA2"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA2"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA2"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA2"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA2"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/alarmThreeFrame"
+            android:layout_width="match_parent"
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|fill_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|fill_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkMonA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Mon"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkTuesA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Tues"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkWedA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Weds"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkThurA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Thurs"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkFriA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Fri"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSatA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sat"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSunA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sun"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameSpinnerA3"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA3"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA3"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA3"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA3"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/alarmFourFrame"
+            android:layout_width="match_parent"
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|fill_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|fill_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkMonA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Mon"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkTuesA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Tues"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkWedA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Weds"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkThurA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Thurs"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkFriA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Fri"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSatA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sat"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSunA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sun"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameSpinnerA4"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA4"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA4"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA4"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA4"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/alarmFiveFrame"
+            android:layout_width="match_parent"
+            android:layout_height="127.6dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|fill_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|fill_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkMonA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Mon"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkTuesA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Tues"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkWedA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Weds"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkThurA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Thurs"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkFriA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Fri"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSatA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sat"
+                        android:textColor="@android:color/background_light" />
+
+                    <CheckBox
+                        android:id="@+id/chkSunA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/background_light"
+                        android:text="Sun"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameSpinnerA5"
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spHoursA5"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/txtColonA5"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=":"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="36sp" />
+
+                    <Spinner
+                        android:id="@+id/spMinsA5"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/spAmPmA5"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL6"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:fadingEdge="none"></FrameLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
