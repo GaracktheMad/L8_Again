@@ -1,13 +1,13 @@
 package com.example.myapplication.model;
 
-public class User {
+public class User implements UsesZipcodes{
     private Alarm[] alarms = {new Alarm(), new Alarm(), new Alarm(), new Alarm(), new Alarm()};
     private String name;
     private int zipCode;
     private int id;
     private static int idCounter = 0;
 
-    public User(String name, int zipCode) throws InvalidZipCodeException{
+    public User(String name, int zipCode) throws InvalidZipCodeException {
         this.name = name;
         id = idCounter++;
         checkZip(zipCode);
@@ -26,19 +26,16 @@ public class User {
         return zipCode;
     }
 
-    public void setZipCode(int zipCode) {
+    public void setZipCode(int zipCode) throws InvalidZipCodeException {
+        checkZip(zipCode);
         this.zipCode = zipCode;
     }
 
-    public Alarm getAlarm(int index) throws IndexOutOfBoundsException{
-        return alarms[index];
+    public Alarm getAlarm(int alarmNumber) throws IndexOutOfBoundsException {
+        return alarms[alarmNumber-1];
     }
 
-    public int getKey(){
+    public int getKey() {
         return id;
-    }
-
-    public static void checkZip(int zip) throws InvalidZipCodeException{
-        //TODO check zip code for errors, if exists throw exception
     }
 }
