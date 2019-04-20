@@ -63,7 +63,9 @@
                 android:id="@+id/switchA1"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
-                android:layout_gravity="end" />
+                android:layout_gravity="end"
+                android:gravity="center|start"
+                android:track="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/txtDaysA1"
@@ -136,7 +138,9 @@
                 android:id="@+id/switchA2"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
-                android:layout_gravity="end" />
+                android:layout_gravity="end"
+                android:scrollbars="none"
+                android:track="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/txtDaysA2"
@@ -210,7 +214,8 @@
                 android:id="@+id/switchA3"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
-                android:layout_gravity="end" />
+                android:layout_gravity="end"
+                android:track="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/txtDaysA3"
@@ -285,7 +290,8 @@
                 android:id="@+id/switchA4"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
-                android:layout_gravity="end" />
+                android:layout_gravity="end"
+                android:track="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/txtDaysA4"
@@ -364,7 +370,8 @@
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:layout_gravity="end"
-                android:gravity="end" />
+                android:gravity="end"
+                android:track="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/txtDaysA5"
