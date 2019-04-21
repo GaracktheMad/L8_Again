@@ -14,12 +14,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
         public void openAlarmScreenActivity(View view) {
-            Intent webIntent = new Intent(this, AlarmScreenActivity.class);
-            startActivity(webIntent);
+            Intent alarmIntent = new Intent(this, AlarmScreenActivity.class);
+            startActivity(alarmIntent);
     }
 
     public void openHomeActivity(View view) {
-        Intent webIntent = new Intent(this, HomeActivity.class);
-        startActivity(webIntent);
+        Intent homeIntent = new Intent(this, HomeActivity.class);
+        startActivity(homeIntent);
     }
 }

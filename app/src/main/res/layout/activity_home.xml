@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    tools:context=".AlarmScreenActivity">
-
+    tools:context=".HomeActivity">
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -31,7 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="8dp"
-                android:text="Profile" />
+                android:text="Profile"
+                android:onClick="openProfileActivity"/>
 
             <Button
                 android:id="@+id/btnAlarmsPage"
@@ -39,7 +38,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="8dp"
-                android:text="Alarms" />
+                android:text="Alarms"
+                android:onClick="openAlarmScreenActivity"
+                />
         </FrameLayout>
 
         <TextView
@@ -81,4 +82,5 @@
             android:weekNumberColor="@color/colorPrimaryDark"
             android:weekSeparatorLineColor="@color/colorPrimaryDark" />
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

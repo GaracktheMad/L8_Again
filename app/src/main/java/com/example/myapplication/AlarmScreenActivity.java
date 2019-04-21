@@ -15,11 +15,11 @@ public class AlarmScreenActivity extends AppCompatActivity {
 
 
         public void openMainActivity(View view) {
-            Intent webIntent = new Intent(this, MainActivity.class);
-            startActivity(webIntent);
+            Intent mainIntent = new Intent(this, MainActivity.class);
+            startActivity(mainIntent);
     }
     public void openSettingActivity(View view) {
-        Intent webIntent = new Intent(this, SettingPage.class);
-        startActivity(webIntent);
+        Intent settingIntent = new Intent(this, SettingsActivity.class);
+        startActivity(settingIntent);
     }
 }

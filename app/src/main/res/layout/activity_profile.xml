@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".activity_profile">
+    tools:context=".ProfileActivity">
 
     <LinearLayout
         android:layout_width="395dp"
@@ -32,7 +32,8 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="8dp"
-                android:text="Home" />
+                android:text="Home"
+                android:onClick="openHomeActivity"/>
 
             <Button
                 android:id="@+id/btnSaveProfile"
