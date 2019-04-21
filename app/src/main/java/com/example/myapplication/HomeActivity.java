@@ -21,4 +21,8 @@ public class HomeActivity extends AppCompatActivity {
         Intent profileIntent = new Intent(this, ProfileActivity.class);
         startActivity(profileIntent);
     }
+    public void openWeatherActivity(View view) {
+        Intent weatherIntent = new Intent(this, WeatherActivity.class);
+        startActivity(weatherIntent);
+    }
 }
