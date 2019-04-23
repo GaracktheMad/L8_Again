@@ -77,6 +77,7 @@ on activity Four: "activity_home.xml"
 	progBarOverall	**global variable, takes 
 	btnAlarmsPage	**Takes to activity_alarm_screen.xml
 	btnProfile	**Will take to activity_profile.xml
+	btnWeather	*Takes to activity_weather.xml
 
 on activity Five: "activity_profile.xml"
 	**Input of person's name and their Zip code
@@ -85,4 +86,8 @@ on activity Five: "activity_profile.xml"
 	btnSaveProfile	*saves all inputs to the global variables
 	txtZipCode	*will hold zip code for weather
 	txtProfileName	*will hold profile name
+	
+on activity Six: "activity_weather.xml"
+	btnHomefromWeather	*Takes to the activity_Home.xml
+
 

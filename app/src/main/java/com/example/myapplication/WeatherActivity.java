@@ -80,7 +80,10 @@ public class WeatherActivity extends AppCompatActivity {
         });
 
     }
-
+	public void openAlarmScreenActivity(View view) {
+        Intent webIntent = new Intent(this, WeatherActivity.class);
+        startActivity(webIntent);
+    }
 
     public void taskLoadUp(String query) {
         if (Function.isNetworkAvailable(getApplicationContext())) {
@@ -135,9 +138,6 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 }
-
-
-
-
+    
 
 
