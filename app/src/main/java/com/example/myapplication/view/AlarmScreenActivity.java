@@ -14,7 +14,7 @@ public class AlarmScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_screen);
         Button settingsBtn = findViewById(R.id.btnSettings);
-        settingsBtn.setOnClickListener(v -> startActivity(new Intent(AlarmScreenActivity.this, SettingPage.class)));
+        settingsBtn.setOnClickListener(v -> startActivity(new Intent(AlarmScreenActivity.this, SettingActivity.class)));
         Button homeBtn = findViewById(R.id.btnHome);
         homeBtn.setOnClickListener(v -> startActivity(new Intent(AlarmScreenActivity.this, HomeActivity.class)));
     }

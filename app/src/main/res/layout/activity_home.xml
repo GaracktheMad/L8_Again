@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="8dp"
-                android:text="Profile"
+                android:text="@string/profile"
                 android:onClick="openProfileActivity"/>
 
             <Button
@@ -37,18 +37,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:onClick="openAlarmScreenActivity"
-                android:text="Alarms" />
-
-            <Button
-                android:id="@+id/btnWeather"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center"
-                android:layout_marginLeft="8dp"
-                android:onClick="openWeatherActivity"
-                android:text="Alarms" />
+                android:text="@string/alarms" />
 
             <Button
                 android:id="@+id/btnWeather"
@@ -57,7 +48,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="Weather" />
+                android:text="@string/weather" />
         </FrameLayout>
 
         <TextView
@@ -65,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Welcome!"
+            android:text="@string/welcome"
             android:textColor="@android:color/background_light"
             android:textSize="30sp" />
 
@@ -74,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:text="Your overall score"
+            android:text="@string/your_overall_score"
             android:textColor="@android:color/background_light"
             android:textSize="24sp" />
 
