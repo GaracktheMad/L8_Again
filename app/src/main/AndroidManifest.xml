@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_profile"></activity>
+        <activity android:name=".WeatherActivity"></activity>
+        <activity android:name=".activity_profile" />
         <activity android:name=".AlarmScreenActivity" />
         <activity android:name=".SettingPage" />
         <activity android:name=".MainActivity">
