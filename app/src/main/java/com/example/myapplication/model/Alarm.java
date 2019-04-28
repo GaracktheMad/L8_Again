@@ -1,13 +1,15 @@
 package com.example.myapplication.model;
 
-public class Alarm {
-    public Alarm(boolean amPm) {
-        this.amPm = amPm;
+import java.io.Serializable;
+
+public class Alarm implements Serializable {
+    public Alarm(boolean isAm) {
+        this.isAm = isAm;
     }
 
     private boolean dayOfWeek[] = {false, false, false, false, false, false, false};
 
-    public boolean getDayOfWeekState(int day){
+    public boolean getDayOfWeekState(int day) {
         return dayOfWeek[day];
     }
 
@@ -45,24 +47,24 @@ public class Alarm {
         this.alarmID = alarmID;
     }
 
-    private boolean amPm;
+    private boolean isAm;
 
-    public boolean isAmPm() {
-        return amPm;
+    public boolean isAm() {
+        return isAm;
     }
 
-    public void setAmPm(boolean amPm) {
-        this.amPm = amPm;
+    public void setAm(boolean am) {
+        this.isAm = am;
     }
 
-    private boolean onOff;
+    private boolean isOn;
 
-    public boolean isOnOff() {
-        return onOff;
+    public boolean isOn() {
+        return isOn;
     }
 
-    public void setOnOff(boolean onOff) {
-        this.onOff = onOff;
+    public void setOn(boolean on) {
+        this.isOn = on;
     }
 
 

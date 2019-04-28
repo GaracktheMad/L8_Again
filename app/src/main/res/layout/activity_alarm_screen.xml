@@ -33,16 +33,14 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="start|center_vertical"
-                android:text="@string/home"
-                android:onClick="openMainActivity"/>
+                android:text="@string/home" />
 
             <Button
                 android:id="@+id/btnSettings"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|end"
-                android:text="@string/set"
-                android:onClick="openSettingActivity"/>
+                android:text="@string/set" />
 
         </FrameLayout>
 

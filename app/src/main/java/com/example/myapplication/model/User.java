@@ -1,11 +1,17 @@
 package com.example.myapplication.model;
 
-public class User implements UsesZipcodes{
-    private Alarm[] alarms = {new Alarm(), new Alarm(), new Alarm(), new Alarm(), new Alarm()};
+import java.io.Serializable;
+
+public class User implements UsesZipcodes, Serializable {
+    @Deprecated
+    private Alarm[] alarms = {new Alarm(true), new Alarm(true), new Alarm(true), new Alarm(true), new Alarm(true)};
+    public Alarm alarm;
     private String name;
     private int zipCode;
     private int id;
     private static int idCounter = 0;
+    private int successes;
+    private int total;
 
     public User(String name, int zipCode) throws InvalidZipCodeException {
         this.name = name;
@@ -31,8 +37,21 @@ public class User implements UsesZipcodes{
         this.zipCode = zipCode;
     }
 
-    public Alarm getAlarm(int alarmNumber) throws IndexOutOfBoundsException {
+    @Deprecated
+    public Alarm getAlarmAt(int alarmNumber) throws IndexOutOfBoundsException {
         return alarms[alarmNumber-1];
+    }
+
+    public int onTimePercentage(){
+        return (successes * 100)/(total * 100);
+    }
+
+    public void wasLateAgain(){
+        total++;
+    }
+    public void wasOnTime(){
+        total ++;
+        successes++;
     }
 
     public int getKey() {

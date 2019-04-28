@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".view.AlarmScreenActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/background_dark"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameButtons"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none">
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/home" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|end"
+                android:text="@string/set" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/framePicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_dark"
+            android:fadingEdge="none">
+
+            <TimePicker
+                android:id="@+id/simpleTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="#090"
+                android:padding="20dp"
+                android:timePickerMode="spinner" />
+
+            <Switch
+                android:id="@+id/offSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch" />
+        </FrameLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
