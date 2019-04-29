@@ -1,6 +1,6 @@
 package com.example.myapplication.model;
 
-public class Alarm {
+public class Alarm implements alarmHour, alarmMinute{
     public Alarm(boolean amPm) {
         this.amPm = amPm;
     }
@@ -21,7 +21,8 @@ public class Alarm {
         return hour;
     }
 
-    public void setHour(int hour) {
+    public void setHour(int hour) throws InvalidHourException{
+        checkhour(hour);
         this.hour = hour;
     }
 
@@ -31,7 +32,8 @@ public class Alarm {
         return minute;
     }
 
-    public void setMinute(int minute) {
+    public void setMinute(int minute) throws InvalidMinuteExcception {
+        checkminute(minute);
         this.minute = minute;
     }
 
