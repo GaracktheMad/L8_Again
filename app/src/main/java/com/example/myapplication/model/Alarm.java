@@ -1,6 +1,16 @@
 package com.example.myapplication.model;
 
-public class Alarm implements alarmHour, alarmMinute{
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.myapplication.R;
+
+
+public class Alarm extends Activity implements alarmHour, alarmMinute{
     public Alarm(boolean amPm) {
         this.amPm = amPm;
     }
@@ -18,6 +28,10 @@ public class Alarm implements alarmHour, alarmMinute{
     private int hour;
 
     public int getHour() {
+        setContentView(R.layout.activity_alarm_screen);
+
+        //--- text view---
+        TextView txtView = (TextView) findViewById(R.id.txtHoursA1);
         return hour;
     }
 
