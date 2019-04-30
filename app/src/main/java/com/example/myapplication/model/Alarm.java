@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.example.myapplication.R;
 
 
-public class Alarm extends Activity implements alarmHour, alarmMinute{
+public class Alarm implements isAlarm{
     public Alarm(boolean amPm) {
         this.amPm = amPm;
     }
@@ -28,15 +28,11 @@ public class Alarm extends Activity implements alarmHour, alarmMinute{
     private int hour;
 
     public int getHour() {
-        setContentView(R.layout.activity_alarm_screen);
-
-        //--- text view---
-        TextView txtView = (TextView) findViewById(R.id.txtHoursA1);
         return hour;
     }
 
     public void setHour(int hour) throws InvalidHourException{
-        checkhour(hour);
+        checkHour(hour);
         this.hour = hour;
     }
 
@@ -47,7 +43,7 @@ public class Alarm extends Activity implements alarmHour, alarmMinute{
     }
 
     public void setMinute(int minute) throws InvalidMinuteExcception {
-        checkminute(minute);
+        checkMinute(minute);
         this.minute = minute;
     }
 
