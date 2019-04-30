@@ -17,8 +17,11 @@ public class MainActivity extends AppCompatActivity {
         Button alarmsBtn = findViewById(R.id.alarmsBtn);
         alarmsBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AlarmScreenActivity.class)));
         Button homeBtn = findViewById(R.id.btnHome);
-        homeBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, HomeActivity.class)));
+        /*homeBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, WebActivity.class)));*/
     }
 
-
+    public void openWebActivity(View view) {
+        Intent webIntent = new Intent(this, WebActivity.class);
+        startActivity(webIntent);
+    }
 }

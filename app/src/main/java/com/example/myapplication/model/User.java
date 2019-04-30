@@ -1,7 +1,7 @@
 package com.example.myapplication.model;
 
 public class User implements UsesZipcodes{
-    private Alarm[] alarms = {new Alarm(), new Alarm(), new Alarm(), new Alarm(), new Alarm()};
+    private Alarm[] alarms = {new Alarm(false), new Alarm(false), new Alarm(false  ), new Alarm(false), new Alarm(false)};
     private String name;
     private int zipCode;
     private int id;
