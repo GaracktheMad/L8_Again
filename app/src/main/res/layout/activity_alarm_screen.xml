@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".AlarmScreenActivity">
+    tools:context=".view.AlarmScreenActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -33,7 +33,7 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="start|center_vertical"
-                android:text="Home"
+                android:text="@string/home"
                 android:onClick="openMainActivity"/>
 
             <Button
@@ -41,7 +41,7 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|end"
-                android:text="Set"
+                android:text="@string/set"
                 android:onClick="openSettingActivity"/>
 
         </FrameLayout>

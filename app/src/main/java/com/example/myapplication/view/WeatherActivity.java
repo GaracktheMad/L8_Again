@@ -1,18 +1,23 @@
-package com.example.myapplication;
+package com.example.myapplication.view;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.myapplication.R;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.text.DateFormat;
@@ -35,52 +40,45 @@ public class WeatherActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_weather);
 
-        loader = (ProgressBar) findViewById(R.id.loader);
-        selectCity = (TextView) findViewById(R.id.selectCity);
-        cityField = (TextView) findViewById(R.id.city_field);
-        updatedField = (TextView) findViewById(R.id.updated_field);
-        detailsField = (TextView) findViewById(R.id.details_field);
-        currentTemperatureField = (TextView) findViewById(R.id.current_temperature_field);
-        humidity_field = (TextView) findViewById(R.id.humidity_field);
-        pressure_field = (TextView) findViewById(R.id.pressure_field);
-        weatherIcon = (TextView) findViewById(R.id.weather_icon);
+        Button etPhoneHomeBtn = findViewById(R.id.btnHomefromWeather);
+        etPhoneHomeBtn.setOnClickListener(v -> startActivity(new Intent(WeatherActivity.this, HomeActivity.class)));
+
+        loader = findViewById(R.id.loader);
+        selectCity = findViewById(R.id.selectCity);
+        cityField = findViewById(R.id.city_field);
+        updatedField = findViewById(R.id.updated_field);
+        detailsField =  findViewById(R.id.details_field);
+        currentTemperatureField =  findViewById(R.id.current_temperature_field);
+        humidity_field =  findViewById(R.id.humidity_field);
+        pressure_field = findViewById(R.id.pressure_field);
+        weatherIcon =  findViewById(R.id.weather_icon);
         weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weathericons_regular_webfont.ttf");
         weatherIcon.setTypeface(weatherFont);
 
         taskLoadUp(city);
 
-        selectCity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(WeatherActivity.this);
-                alertDialog.setTitle("Change City");
-                final EditText input = new EditText(WeatherActivity.this);
-                input.setText(city);
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT);
-                input.setLayoutParams(lp);
-                alertDialog.setView(input);
+        selectCity.setOnClickListener(v -> {
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(WeatherActivity.this);
+            alertDialog.setTitle("Change City");
+            final EditText input = new EditText(WeatherActivity.this);
+            input.setText(city);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT);
+            input.setLayoutParams(lp);
+            alertDialog.setView(input);
 
-                alertDialog.setPositiveButton("Change",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                city = input.getText().toString();
-                                taskLoadUp(city);
-                            }
-                        });
-                alertDialog.setNegativeButton("Cancel",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                alertDialog.show();
-            }
+            alertDialog.setPositiveButton("Change",
+                    (dialog, which) -> {
+                        city = input.getText().toString();
+                        taskLoadUp(city);
+                    });
+            alertDialog.setNegativeButton("Cancel",
+                    (dialog, which) -> dialog.cancel());
+            alertDialog.show();
         });
 
     }
-
 
     public void taskLoadUp(String query) {
         if (Function.isNetworkAvailable(getApplicationContext())) {
@@ -135,9 +133,6 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 }
-
-
-
-
+    
 
 

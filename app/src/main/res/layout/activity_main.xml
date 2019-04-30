@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:onClick="openAlarmScreenActivity"
-            android:text="Alarms"
+            android:text="@string/alarms"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lateBtn"
             app:layout_constraintTop_toTopOf="parent" />
@@ -98,11 +98,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="openHomeActivity"
-            android:text="Home Test"
+            android:text="@string/home_test"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/alarmsBtn"
             app:layout_constraintHorizontal_bias="0.666"

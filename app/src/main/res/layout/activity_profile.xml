@@ -32,7 +32,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="8dp"
-                android:text="Home"
+                android:text="@string/home"
                 android:onClick="openHomeActivity"/>
 
             <Button
@@ -41,7 +41,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="8dp"
-                android:text="Save" />
+                android:text="@string/save" />
         </FrameLayout>
 
         <FrameLayout
@@ -53,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Personalize your profile"
+                android:text="@string/personalize_your_profile"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
         </FrameLayout>
@@ -80,7 +80,7 @@
                     android:id="@+id/txtNamePrompt"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="Please input the name you would like to be referred to as:"
+                    android:text="@string/please_input_the_name_you_would_like_to_be_referred_to_as"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp" />
 
@@ -102,7 +102,7 @@
                     android:id="@+id/txtZipPrompt"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="Please enter the Zip code you would like to get the weather for:"
+                    android:text="@string/please_enter_the_zip_code_you_would_like_to_get_the_weather_for"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp" />
 
