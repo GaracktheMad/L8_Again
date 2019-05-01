@@ -15,8 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".view.WebMeme"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.Weather"></activity>
+        <activity android:name=".view.WebMeme" />
         <activity android:name=".view.AlarmPickerActivity" />
         <activity android:name=".view.ProfileActivity" />
         <activity android:name=".view.MainActivity">

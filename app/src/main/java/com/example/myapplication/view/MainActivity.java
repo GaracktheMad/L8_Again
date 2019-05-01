@@ -3,6 +3,7 @@ package com.example.myapplication.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
@@ -41,7 +42,10 @@ private ProgressBar pb;
         pb.setMax(100);
         pb.setProgress(Controller.me.onTimePercentage());
     }
-
+    public void openWeather(View view) {
+        Intent webIntent = new Intent(this, Weather.class);
+        startActivity(webIntent);
+    }
 
 
 
