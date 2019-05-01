@@ -18,6 +18,7 @@ public class User implements UsesZipcodes, Serializable {
         id = idCounter++;
         checkZip(zipCode);
         this.zipCode = zipCode;
+        successes = 1; total = 1;
     }
 
     public String getName() {
@@ -43,7 +44,7 @@ public class User implements UsesZipcodes, Serializable {
     }
 
     public int onTimePercentage(){
-        return (successes * 100)/(total * 100);
+        return (successes /total) * 100;
     }
 
     public void wasLateAgain(){

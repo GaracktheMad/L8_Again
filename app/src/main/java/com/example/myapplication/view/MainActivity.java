@@ -8,17 +8,19 @@ import android.widget.ProgressBar;
 
 import com.example.myapplication.R;
 import com.example.myapplication.controller.Controller;
+import com.example.myapplication.model.InvalidZipCodeException;
+import com.example.myapplication.model.User;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-
+private ProgressBar pb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button alarmsBtn = findViewById(R.id.alarmsBtn);
-        alarmsBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AlarmScreenActivity.class)));
-        Button homeBtn = findViewById(R.id.btnHome);
-        homeBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, HomeActivity.class)));
+        alarmsBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AlarmPickerActivity.class)));
         Button snoozeBtn = findViewById(R.id.snoozeBtn);
         snoozeBtn.setOnClickListener(v -> {
             boolean b = AlarmHandling.snooze(Controller.me.onTimePercentage());
@@ -26,9 +28,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, WebMeme.class));
             }
         });
-        ProgressBar pb = findViewById(R.id.progressBar);
+        pb = findViewById(R.id.progressBar);
+        try {
+            Controller.getState();
+        } catch (Exception e) {
+            try {
+                Controller.me = new User("John Cena",10109);
+            } catch (InvalidZipCodeException e1) {
+                e1.printStackTrace();
+            }
+        }
+        pb.setMax(100);
         pb.setProgress(Controller.me.onTimePercentage());
     }
+
+
 
 
 }

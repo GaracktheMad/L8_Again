@@ -13,9 +13,9 @@ public class AlarmPickerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_picker);
-        Button settingsBtn = findViewById(R.id.btnSettings);
-        settingsBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, SettingActivity.class)));
+        Button profileBtn = findViewById(R.id.btnProfile);
+        profileBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, ProfileActivity.class)));
         Button homeBtn = findViewById(R.id.btnHome);
-        homeBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, HomeActivity.class)));
+        homeBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, MainActivity.class)));
     }
 }

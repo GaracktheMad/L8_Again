@@ -13,6 +13,8 @@ public class Controller {
     public static User me;
     public static boolean loaded = false;
 
+
+
     public static void saveState() {
         try {
             FileOutputStream fileOut =
@@ -26,13 +28,13 @@ public class Controller {
         }
     }
 
-    public static User getState() throws FileNotFoundException, IOException, ClassNotFoundException {
+    public static void getState() throws IOException, ClassNotFoundException {
         User u = null;
         FileInputStream fileIn = new FileInputStream("userData.ser");
         ObjectInputStream in = new ObjectInputStream(fileIn);
         u = (User) in.readObject();
         in.close();
         fileIn.close();
-        return u;
+        me = u;
     }
 }

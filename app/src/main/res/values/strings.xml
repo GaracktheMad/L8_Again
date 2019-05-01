@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">L8 Again</string>
     <string name="late">Late</string>
     <string name="set">Set</string>
     <string name="on_time">On time!</string>
@@ -18,6 +18,5 @@
     <string name="please_input_the_name_you_would_like_to_be_referred_to_as">Please input the name you would like to be referred to as:</string>
     <string name="please_enter_the_zip_code_you_would_like_to_get_the_weather_for">Please enter the Zip code you would like to get the weather for:</string>
     <string name="home_test">Home Test</string>
-    <string name="switch">Switch</string>
     <string name="okay">Okay</string>
 </resources>

@@ -97,18 +97,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="openHomeActivity"
-            android:text="@string/home_test"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/alarmsBtn"
-            app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toEndOf="@+id/lateBtn"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

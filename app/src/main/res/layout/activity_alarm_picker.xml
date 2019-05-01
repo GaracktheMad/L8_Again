@@ -36,18 +36,18 @@
                 android:text="@string/home" />
 
             <Button
-                android:id="@+id/btnSettings"
+                android:id="@+id/btnProfile"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|end"
-                android:text="@string/set" />
+                android:text="@string/profile" />
 
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/framePicker"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@android:color/background_dark"
             android:fadingEdge="none">
 
@@ -60,12 +60,98 @@
                 android:padding="20dp"
                 android:timePickerMode="spinner" />
 
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|fill_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="fill_horizontal"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkMonA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/background_light"
+                    android:text="Mon"
+                    android:textColor="@android:color/background_light" />
+
+                <CheckBox
+                    android:id="@+id/chkTuesA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/background_light"
+                    android:text="Tues"
+                    android:textColor="@android:color/background_light" />
+
+                <CheckBox
+                    android:id="@+id/chkWedA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/background_light"
+                    android:text="Weds"
+                    android:textColor="@android:color/background_light" />
+
+                <CheckBox
+                    android:id="@+id/chkThurA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/background_light"
+                    android:text="Thurs"
+                    android:textColor="@android:color/background_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkFriA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/background_light"
+                    android:text="Fri"
+                    android:textColor="@android:color/background_light" />
+
+                <CheckBox
+                    android:id="@+id/chkSatA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/background_light"
+                    android:text="Sat"
+                    android:textColor="@android:color/background_light" />
+
+                <CheckBox
+                    android:id="@+id/chkSunA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/background_light"
+                    android:text="Sun"
+                    android:textColor="@android:color/background_light" />
+
+            </LinearLayout>
+
             <Switch
                 android:id="@+id/offSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/switch" />
-        </FrameLayout>
+                android:text="On Or Off" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

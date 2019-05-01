@@ -14,6 +14,6 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         Button homeBtn = findViewById(R.id.btnBackHome);
-        homeBtn.setOnClickListener(v -> startActivity(new Intent(ProfileActivity.this, HomeActivity.class)));
+        homeBtn.setOnClickListener(v -> startActivity(new Intent(ProfileActivity.this, MainActivity.class)));
     }
 }
