@@ -3,7 +3,6 @@ package com.example.myapplication.controller;
 import com.example.myapplication.model.User;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -11,9 +10,6 @@ import java.io.ObjectOutputStream;
 
 public class Controller {
     public static User me;
-    public static boolean loaded = false;
-
-
 
     public static void saveState() {
         try {

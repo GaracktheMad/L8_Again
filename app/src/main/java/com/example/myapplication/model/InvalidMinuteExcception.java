@@ -1,4 +1,4 @@
 package com.example.myapplication.model;
 
-public class InvalidMinuteExcception extends Exception {
+public class InvalidMinuteExcception extends InvalidTimeFormatException {
 }

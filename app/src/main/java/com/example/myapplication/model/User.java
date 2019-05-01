@@ -19,6 +19,14 @@ public class User implements UsesZipcodes, Serializable {
         checkZip(zipCode);
         this.zipCode = zipCode;
         successes = 1; total = 1;
+        alarm = new Alarm(true);
+        try {
+            alarm.setHour(5);alarm.setMinute(0);
+            boolean[] b = {false,true,true,true,true,true,false};
+            alarm.setDaysOfWeek(b);
+        } catch (InvalidTimeFormatException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getName() {

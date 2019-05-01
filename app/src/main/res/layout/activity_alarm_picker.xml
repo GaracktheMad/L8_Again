@@ -75,7 +75,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/chkMonA1"
+                    android:id="@+id/chkMon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -84,7 +84,7 @@
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkTuesA1"
+                    android:id="@+id/chkTues"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,7 +93,7 @@
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkWedA1"
+                    android:id="@+id/chkWed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -102,7 +102,7 @@
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkThurA1"
+                    android:id="@+id/chkThur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -117,7 +117,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/chkFriA1"
+                    android:id="@+id/chkFri"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -126,7 +126,7 @@
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkSatA1"
+                    android:id="@+id/chkSat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -135,7 +135,7 @@
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkSunA1"
+                    android:id="@+id/chkSun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

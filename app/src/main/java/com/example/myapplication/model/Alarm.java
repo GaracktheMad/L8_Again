@@ -1,13 +1,6 @@
 package com.example.myapplication.model;
 
 import java.io.Serializable;
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-import com.example.myapplication.R;
 
 public class Alarm implements Serializable, isAlarm {
     public Alarm(boolean isAm) {
@@ -15,14 +8,23 @@ public class Alarm implements Serializable, isAlarm {
 
     }
 
+    /**
+     * Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+     */
     private boolean dayOfWeek[] = {false, false, false, false, false, false, false};
 
+    /**
+     * Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+     */
     public boolean getDayOfWeekState(int day) {
         return dayOfWeek[day];
     }
 
-    public void setDayOfWeek(int day, boolean state) {
-        this.dayOfWeek[day] = state;
+    /**
+     * Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+     */    public void setDaysOfWeek(boolean[] days) throws ArrayIndexOutOfBoundsException {
+        if (days.length != dayOfWeek.length) throw new ArrayIndexOutOfBoundsException();
+        for (int i = 0; i < days.length; i++) dayOfWeek[i] = days[i];
     }
 
     private int hour;
@@ -31,7 +33,7 @@ public class Alarm implements Serializable, isAlarm {
         return hour;
     }
 
-    public void setHour(int hour) throws InvalidHourException{
+    public void setHour(int hour) throws InvalidHourException {
         checkHour(hour);
         this.hour = hour;
     }
@@ -47,12 +49,15 @@ public class Alarm implements Serializable, isAlarm {
         this.minute = minute;
     }
 
+    @Deprecated
     private int alarmID;
 
+    @Deprecated
     public int getAlarmID() {
         return alarmID;
     }
 
+    @Deprecated
     public void setAlarmID(int alarmID) {
         this.alarmID = alarmID;
     }
