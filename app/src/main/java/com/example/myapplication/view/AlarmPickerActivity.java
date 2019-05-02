@@ -15,10 +15,13 @@ public class AlarmPickerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_picker);
+
         Button profileBtn = findViewById(R.id.btnProfile);
         profileBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, ProfileActivity.class)));
+
         Button homeBtn = findViewById(R.id.btnHome);
         homeBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, MainActivity.class)));
+
         TimePicker tp = findViewById(R.id.simpleTimePicker);
         tp.setIs24HourView(false);
         if (Controller.me.alarm.isAm() == true) {
@@ -27,6 +30,12 @@ public class AlarmPickerActivity extends AppCompatActivity {
             tp.setHour(Controller.me.alarm.getHour() + 12);
         }
         tp.setMinute(Controller.me.alarm.getMinute());
+
+        Button saveBtn = findViewById(R.id.saveBtn);
+        saveBtn.setOnClickListener(v -> {
+
+        });
+
     }
 }
 

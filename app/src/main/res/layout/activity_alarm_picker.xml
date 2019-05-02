@@ -151,6 +151,12 @@
                 android:layout_height="wrap_content"
                 android:text="On Or Off" />
 
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
         </LinearLayout>
 
     </LinearLayout>

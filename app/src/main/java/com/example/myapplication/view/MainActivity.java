@@ -11,23 +11,41 @@ import com.example.myapplication.controller.Controller;
 import com.example.myapplication.model.InvalidZipCodeException;
 import com.example.myapplication.model.User;
 
-import java.io.IOException;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-private ProgressBar pb;
+    private  ProgressBar pb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button alarmsBtn = findViewById(R.id.alarmsBtn);
         alarmsBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AlarmPickerActivity.class)));
+
         Button snoozeBtn = findViewById(R.id.snoozeBtn);
         snoozeBtn.setOnClickListener(v -> {
-            boolean b = AlarmHandling.snooze(Controller.me.onTimePercentage());
+            boolean b = ah.snooze(Controller.me.onTimePercentage());
             if (b == false) {
                 startActivity(new Intent(MainActivity.this, WebMeme.class));
             }
         });
+
+        Button lateBtn = findViewById(R.id.lateBtn);
+        lateBtn.setOnClickListener(v ->{
+            Controller.me.wasLateAgain();
+            updateProgress();
+            setNextAlarm();
+        });
+
+        Button onTimeBtn = findViewById(R.id.onTimeBtn);
+        onTimeBtn.setOnClickListener(v ->{
+            Controller.me.wasLateAgain();
+            updateProgress();
+            setNextAlarm();
+        });
+
         pb = findViewById(R.id.progressBar);
         try {
             Controller.getState();
@@ -39,10 +57,18 @@ private ProgressBar pb;
             }
         }
         pb.setMax(100);
-        pb.setProgress(Controller.me.onTimePercentage());
+        updateProgress();
     }
 
+    private void setNextAlarm() {
+        Calendar c = Calendar.getInstance();
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+        //TODO Create logic to set next alarm. Duh.
+    }
 
+    private void updateProgress(){
+        pb.setProgress(Controller.me.onTimePercentage());
+    }
 
 
 }
