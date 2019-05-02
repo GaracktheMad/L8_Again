@@ -3,9 +3,7 @@ package com.example.myapplication.model;
 import java.io.Serializable;
 
 public class Alarm implements Serializable, isAlarm {
-    public Alarm(boolean isAm) {
-        this.isAm = isAm;
-
+    public Alarm() {
     }
 
     /**
@@ -47,29 +45,6 @@ public class Alarm implements Serializable, isAlarm {
     public void setMinute(int minute) throws InvalidMinuteExcception {
         checkMinute(minute);
         this.minute = minute;
-    }
-
-    @Deprecated
-    private int alarmID;
-
-    @Deprecated
-    public int getAlarmID() {
-        return alarmID;
-    }
-
-    @Deprecated
-    public void setAlarmID(int alarmID) {
-        this.alarmID = alarmID;
-    }
-
-    private boolean isAm;
-
-    public boolean isAm() {
-        return isAm;
-    }
-
-    public void setAm(boolean am) {
-        this.isAm = am;
     }
 
     private boolean isOn;

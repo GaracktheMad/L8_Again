@@ -1,4 +1,4 @@
-package com.example.myapplication.view;
+package com.example.myapplication.controller;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -12,7 +12,7 @@ import java.util.Calendar;
 
 public class AlarmHandler extends BroadcastReceiver  {
     private AlarmManager am;
-    private PendingIntent pi;
+    private final PendingIntent pi;
     public AlarmHandler(Context context, Intent destinationIntent) {
         am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         pi=PendingIntent.getBroadcast(context.getApplicationContext(),0, destinationIntent,0);
@@ -34,8 +34,12 @@ public class AlarmHandler extends BroadcastReceiver  {
         }
     }
 
-    public void nextAlarm(long miliseconds){
-        am.setExact(AlarmManager.RTC_WAKEUP, miliseconds, pi);
+    public void nextAlarm(long ms){
+        am.setExact(AlarmManager.RTC_WAKEUP, ms, pi);
+    }
+
+    public void cancelAlarm(){
+        am.cancel(pi);
     }
 
 

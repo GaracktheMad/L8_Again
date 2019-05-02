@@ -1,10 +1,6 @@
 package com.example.myapplication.controller;
 
-import android.content.Intent;
-
 import com.example.myapplication.model.User;
-import com.example.myapplication.view.AlarmHandler;
-import com.example.myapplication.view.MainActivity;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -14,7 +10,8 @@ import java.io.ObjectOutputStream;
 
 public class Controller {
     public static User me;
-    AlarmHandler ah = new AlarmHandler(this.getApplicationContext(), new Intent(MainActivity.class, AlarmHandler.class));
+    public static AlarmHandler ah = null;
+    public static boolean firstRun = true;
 
     public static void saveState() {
         try {

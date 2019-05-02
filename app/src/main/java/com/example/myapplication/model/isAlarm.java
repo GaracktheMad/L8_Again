@@ -2,7 +2,7 @@ package com.example.myapplication.model;
 
 public interface isAlarm {
     default void checkHour(int hour) throws InvalidHourException {
-        if (hour > 12 || hour < 1) {
+        if (hour > 24 || hour < 1) {
             throw new InvalidHourException();
         }
     }

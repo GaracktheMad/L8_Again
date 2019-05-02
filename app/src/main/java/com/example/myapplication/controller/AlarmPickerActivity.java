@@ -1,4 +1,4 @@
-package com.example.myapplication.view;
+package com.example.myapplication.controller;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TimePicker;
 
 import com.example.myapplication.R;
-import com.example.myapplication.controller.Controller;
 
 public class AlarmPickerActivity extends AppCompatActivity {
 
@@ -33,7 +32,7 @@ public class AlarmPickerActivity extends AppCompatActivity {
 
         Button saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(v -> {
-
+            //TODO create a new alarm, save data to user
         });
 
     }

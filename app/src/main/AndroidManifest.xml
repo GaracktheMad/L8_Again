@@ -15,10 +15,10 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.WebMeme" />
-        <activity android:name=".view.AlarmPickerActivity" />
-        <activity android:name=".view.ProfileActivity" />
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".controller.WebMeme" />
+        <activity android:name=".controller.AlarmPickerActivity" />
+        <activity android:name=".controller.ProfileActivity" />
+        <activity android:name=".controller.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".view.AlarmHandler"></receiver>
+        <receiver android:name=".controller.AlarmHandler"></receiver>
     </application>
 
 </manifest>

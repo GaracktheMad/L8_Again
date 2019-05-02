@@ -1,4 +1,4 @@
-package com.example.myapplication.view;
+package com.example.myapplication.controller;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
