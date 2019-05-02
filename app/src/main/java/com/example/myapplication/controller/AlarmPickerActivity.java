@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Switch;
 import android.widget.TimePicker;
 
 import com.example.myapplication.R;
@@ -30,25 +31,38 @@ public class AlarmPickerActivity extends AppCompatActivity {
 
         tp.setMinute(Controller.me.alarm.getMinute());
 
-        CheckBox sunday = findViewById(R.id.chkSun);
-        CheckBox monday = findViewById(R.id.chkMon);
-        CheckBox tuesday = findViewById(R.id.chkTues);
-        CheckBox wednesday = findViewById(R.id.chkWed);
-        CheckBox thursday = findViewById(R.id.chkThur);
-        CheckBox friday = findViewById(R.id.chkFri);
-        CheckBox saturday = findViewById(R.id.chkSat);
+        CheckBox[] chkers = {findViewById(R.id.chkSun),
+                findViewById(R.id.chkMon), findViewById(R.id.chkTues), findViewById(R.id.chkWed),
+                findViewById(R.id.chkThur), findViewById(R.id.chkFri), findViewById(R.id.chkSat)};
+        int c = 0;
+        for (CheckBox cb : chkers) {
+            cb.setChecked(Controller.me.alarm.getDayOfWeekState(c));
+            c++;
+        }
 
+        Switch offSwitch = findViewById(R.id.offSwitch);
 
         Button saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(v -> {
             try {
                 Controller.me.alarm.setHour(tp.getHour());
                 Controller.me.alarm.setMinute(tp.getMinute());
-                //TODO Handle days of week
-            } catch (InvalidHourException | InvalidMinuteExcception e) {
+                boolean[] dayStates = new boolean[chkers.length];
+                int counter = 0;
+                for (CheckBox cb : chkers) {
+                    dayStates[counter] = cb.isChecked();
+                    counter++;
+                }
+                Controller.me.alarm.setDaysOfWeek(dayStates);
+                Controller.me.alarm.setOn(offSwitch.isChecked());
+                Controller.ah.cancelAlarm();
+                if (Controller.me.alarm.isOn() == true) {
+                    Controller.ah.setNextAlarm();
+                }
+                Controller.saveState();
+            } catch (InvalidHourException | InvalidMinuteExcception | ArrayIndexOutOfBoundsException e) {
                 e.printStackTrace();
             }
-            //TODO Save file, set next alarm, Cancel old alarms
         });
 
     }

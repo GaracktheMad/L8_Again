@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
         lateBtn.setOnClickListener(v -> {
             Controller.me.wasLateAgain();
             updateProgress();
-            setNextAlarm();
+            Controller.ah.setNextAlarm();
         });
 
         Button onTimeBtn = findViewById(R.id.onTimeBtn);
         onTimeBtn.setOnClickListener(v -> {
             Controller.me.wasOnTime();
             updateProgress();
-            setNextAlarm();
+            Controller.ah.setNextAlarm();
         });
 
         pb = findViewById(R.id.progressBar);
@@ -61,12 +61,6 @@ public class MainActivity extends AppCompatActivity {
         }
         pb.setMax(100);
         updateProgress();
-    }
-
-    private void setNextAlarm() {
-        Calendar c = Calendar.getInstance();
-        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
-        //TODO Create logic to set next alarm. Duh.
     }
 
     private void updateProgress() {

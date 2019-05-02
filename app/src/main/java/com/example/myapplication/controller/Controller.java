@@ -36,7 +36,7 @@ public class Controller {
         me = u;
     }
 
-    public int getNextDay(int currentDay){
+    public static int getNextDay(int currentDay){
         int workingDay = currentDay++;
         for(int i = 1; i < 7; i++){
             if(workingDay > 7){
