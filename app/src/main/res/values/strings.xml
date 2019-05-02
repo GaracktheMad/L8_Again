@@ -19,4 +19,13 @@
     <string name="please_enter_the_zip_code_you_would_like_to_get_the_weather_for">Please enter the Zip code you would like to get the weather for:</string>
     <string name="home_test">Home Test</string>
     <string name="okay">Okay</string>
+    <string name="mon">Mon</string>
+    <string name="tues">Tues</string>
+    <string name="weds">Weds</string>
+    <string name="thurs">Thurs</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="on_or_off">On Or Off</string>
+    <string name="save">Save</string>
 </resources>

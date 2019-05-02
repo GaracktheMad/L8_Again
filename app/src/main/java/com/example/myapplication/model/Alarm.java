@@ -36,6 +36,7 @@ public class Alarm implements Serializable, isAlarm {
         this.hour = hour;
     }
 
+
     private int minute;
 
     public int getMinute() {

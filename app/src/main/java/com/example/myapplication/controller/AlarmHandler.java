@@ -11,8 +11,15 @@ import java.util.Calendar;
 
 
 public class AlarmHandler extends BroadcastReceiver  {
+
     private AlarmManager am;
     private final PendingIntent pi;
+
+    public AlarmHandler() {
+        am = null;
+        pi = null;
+    }
+
     public AlarmHandler(Context context, Intent destinationIntent) {
         am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         pi=PendingIntent.getBroadcast(context.getApplicationContext(),0, destinationIntent,0);
