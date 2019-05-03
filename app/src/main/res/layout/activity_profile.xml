@@ -84,10 +84,11 @@
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp" />
 
-                <TextView
+                <EditText
                     android:id="@+id/txtProfileName"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
+                    android:inputType="textPersonName"
                     android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
@@ -106,10 +107,11 @@
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp" />
 
-                <TextView
+                <EditText
                     android:id="@+id/txtZipCode"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:inputType="number"
                     android:textColor="@android:color/background_light" />
 
                 <FrameLayout

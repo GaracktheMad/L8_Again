@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.Weather"/>
+        <activity android:name=".controller.Weather"/>
         <activity android:name=".controller.WebMeme" />
         <activity android:name=".controller.AlarmPickerActivity" />
         <activity android:name=".controller.ProfileActivity" />

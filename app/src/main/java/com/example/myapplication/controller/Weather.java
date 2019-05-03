@@ -1,4 +1,4 @@
-package com.example.myapplication.view;
+package com.example.myapplication.controller;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Typeface;
