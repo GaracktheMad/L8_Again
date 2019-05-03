@@ -97,6 +97,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/weatherBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00EAFF"
+            android:onClick="openWeather"
+            android:text="Weather"
+            app:layout_constraintBottom_toTopOf="@+id/onTimeBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
