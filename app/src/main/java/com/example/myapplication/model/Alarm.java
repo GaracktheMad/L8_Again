@@ -20,9 +20,23 @@ public class Alarm implements Serializable, isAlarm {
 
     /**
      * Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-     */    public void setDaysOfWeek(boolean[] days) throws ArrayIndexOutOfBoundsException {
+     */
+    public void setDaysOfWeek(boolean[] days) throws ArrayIndexOutOfBoundsException {
         if (days.length != dayOfWeek.length) throw new ArrayIndexOutOfBoundsException();
         for (int i = 0; i < days.length; i++) dayOfWeek[i] = days[i];
+    }
+
+    /**
+     * Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+     *
+     * @return Deep copy of dayOfWeek
+     */
+    public boolean[] getDaysOfWeekStates() {
+        boolean[] b = new boolean[7];
+        for (int i = 0; i < b.length; i++) {
+            b[i] = dayOfWeek[i];
+        }
+        return b;
     }
 
     private int hour;

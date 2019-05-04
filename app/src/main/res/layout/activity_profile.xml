@@ -32,8 +32,8 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="8dp"
-                android:text="@string/home"
-                android:onClick="openHomeActivity"/>
+                android:onClick="openHomeActivity"
+                android:text="@string/home" />
 
             <Button
                 android:id="@+id/btnSaveProfile"

@@ -16,19 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".controller.Weather"/>
+        <activity android:name=".controller.Weather" />
         <activity android:name=".controller.WebMeme" />
-        <activity android:name=".controller.AlarmPickerActivity" />
-        <activity android:name=".controller.ProfileActivity" />
-        <activity android:name=".controller.MainActivity">
+        <activity android:name=".controller.AlarmPickerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".controller.ProfileActivity" />
+        <activity android:name=".controller.MainActivity" />
 
-        <receiver android:name="controller.AlarmHandler"></receiver>
     </application>
 
 </manifest>

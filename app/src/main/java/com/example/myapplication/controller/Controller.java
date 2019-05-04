@@ -1,5 +1,7 @@
 package com.example.myapplication.controller;
 
+import android.content.Context;
+
 import com.example.myapplication.model.User;
 
 import java.io.File;
@@ -13,11 +15,14 @@ public class Controller {
     public static User me;
     public static AlarmHandler ah = null;
     public static boolean firstRun = true;
+    public static Context context;
 
     public static void saveState() {
         try {
+            File path = context.getFilesDir();
+            File file = new File(path, "userData.ser");
             FileOutputStream fileOut =
-                    new FileOutputStream("userData.ser");
+                    new FileOutputStream(file);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(me);
             out.close();
@@ -28,23 +33,23 @@ public class Controller {
     }
 
     public static void getState() {
-        User u = null;
+        User u = null;File path = context.getFilesDir();
+        File file = new File(path, "userData.ser");
         try {
             u = new User("Lemmy", 89109);
         } catch (Exception e) {
             e.printStackTrace();
         }
         try {
-            FileInputStream fileIn = new FileInputStream("userData.ser");
+            FileInputStream fileIn = new FileInputStream(file);
             ObjectInputStream in = new ObjectInputStream(fileIn);
             u = (User) in.readObject();
             in.close();
             fileIn.close();
         } catch (Exception e) {
             e.printStackTrace();
-            File yourFile = new File("userData.ser");
             try {
-                yourFile.createNewFile();
+                file.createNewFile();
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
@@ -52,17 +57,13 @@ public class Controller {
         me = u;
     }
 
-    public static int getNextDay(int currentDay) {
-        int workingDay = currentDay++;
-        for (int i = 1; i < 7; i++) {
-            if (workingDay > 7) {
-                workingDay = 0;
+    public static void activateAlarms() {
+        if (me.alarm.isOn()) {
+            try {
+                ah.cancelAlarms();
+            } catch (Exception e) {
             }
-            if (me.alarm.getDayOfWeekState(workingDay - 1) == true) {
-                return workingDay;
-            }
-            workingDay++;
+            ah.setAlarms(me.alarm.getDaysOfWeekStates());
         }
-        return currentDay;
     }
 }

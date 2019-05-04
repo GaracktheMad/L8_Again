@@ -1,5 +1,8 @@
 package com.example.myapplication.controller;
 
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +21,33 @@ public class AlarmPickerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_picker);
+
+        if (Controller.firstRun == true) {
+            PendingIntent[] intents = {
+                    PendingIntent.getActivity(this, 10001,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10002,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10003,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10004,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10005,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10006,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10007,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10008,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT)
+            };
+            Controller.ah = new AlarmHandler((AlarmManager) getSystemService(Activity.ALARM_SERVICE),
+                    intents);
+            Controller.firstRun = false;
+            Controller.context = getApplicationContext();
+            Controller.getState();
+        }
+
 
         Button profileBtn = findViewById(R.id.btnProfile);
         profileBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, ProfileActivity.class)));
@@ -41,6 +71,7 @@ public class AlarmPickerActivity extends AppCompatActivity {
         }
 
         Switch offSwitch = findViewById(R.id.offSwitch);
+        offSwitch.setChecked(Controller.me.alarm.isOn());
 
         Button saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(v -> {
@@ -55,10 +86,8 @@ public class AlarmPickerActivity extends AppCompatActivity {
                 }
                 Controller.me.alarm.setDaysOfWeek(dayStates);
                 Controller.me.alarm.setOn(offSwitch.isChecked());
-                Controller.ah.cancelAlarm();
-                if (Controller.me.alarm.isOn() == true) {
-                    Controller.ah.setNextAlarm();
-                }
+                Controller.ah.cancelAlarms();
+                Controller.activateAlarms();
                 Controller.saveState();
             } catch (InvalidHourException | InvalidMinuteExcception | ArrayIndexOutOfBoundsException e) {
                 e.printStackTrace();
