@@ -2,8 +2,8 @@ package com.example.myapplication.controller;
 
 import com.example.myapplication.model.User;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -11,9 +11,8 @@ import java.io.ObjectOutputStream;
 
 public class Controller {
     public static User me;
-    public static boolean loaded = false;
-
-
+    public static AlarmHandler ah = null;
+    public static boolean firstRun = true;
 
     public static void saveState() {
         try {
@@ -28,13 +27,42 @@ public class Controller {
         }
     }
 
-    public static void getState() throws IOException, ClassNotFoundException {
+    public static void getState() {
         User u = null;
-        FileInputStream fileIn = new FileInputStream("userData.ser");
-        ObjectInputStream in = new ObjectInputStream(fileIn);
-        u = (User) in.readObject();
-        in.close();
-        fileIn.close();
+        try {
+            u = new User("Lemmy", 89109);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FileInputStream fileIn = new FileInputStream("userData.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            u = (User) in.readObject();
+            in.close();
+            fileIn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            File yourFile = new File("userData.ser");
+            try {
+                yourFile.createNewFile();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
         me = u;
+    }
+
+    public static int getNextDay(int currentDay) {
+        int workingDay = currentDay++;
+        for (int i = 1; i < 7; i++) {
+            if (workingDay > 7) {
+                workingDay = 0;
+            }
+            if (me.alarm.getDayOfWeekState(workingDay - 1) == true) {
+                return workingDay;
+            }
+            workingDay++;
+        }
+        return currentDay;
     }
 }

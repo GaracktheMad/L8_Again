@@ -75,39 +75,39 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/chkMonA1"
+                    android:id="@+id/chkMon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/background_light"
-                    android:text="Mon"
+                    android:text="@string/mon"
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkTuesA1"
+                    android:id="@+id/chkTues"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/background_light"
-                    android:text="Tues"
+                    android:text="@string/tues"
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkWedA1"
+                    android:id="@+id/chkWed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/background_light"
-                    android:text="Weds"
+                    android:text="@string/weds"
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkThurA1"
+                    android:id="@+id/chkThur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/background_light"
-                    android:text="Thurs"
+                    android:text="@string/thurs"
                     android:textColor="@android:color/background_light" />
             </LinearLayout>
 
@@ -117,30 +117,30 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/chkFriA1"
+                    android:id="@+id/chkFri"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/background_light"
-                    android:text="Fri"
+                    android:text="@string/fri"
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkSatA1"
+                    android:id="@+id/chkSat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/background_light"
-                    android:text="Sat"
+                    android:text="@string/sat"
                     android:textColor="@android:color/background_light" />
 
                 <CheckBox
-                    android:id="@+id/chkSunA1"
+                    android:id="@+id/chkSun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/background_light"
-                    android:text="Sun"
+                    android:text="@string/sun"
                     android:textColor="@android:color/background_light" />
 
             </LinearLayout>
@@ -149,7 +149,13 @@
                 android:id="@+id/offSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="On Or Off" />
+                android:text="@string/on_or_off" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save" />
 
         </LinearLayout>
 
