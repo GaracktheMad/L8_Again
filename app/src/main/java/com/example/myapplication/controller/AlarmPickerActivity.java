@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Switch;
@@ -51,9 +52,6 @@ public class AlarmPickerActivity extends AppCompatActivity {
 
         Button profileBtn = findViewById(R.id.btnProfile);
         profileBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, ProfileActivity.class)));
-
-        Button homeBtn = findViewById(R.id.btnHome);
-        homeBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, MainActivity.class)));
 
         TimePicker tp = findViewById(R.id.simpleTimePicker);
         tp.setIs24HourView(false);

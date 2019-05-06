@@ -27,21 +27,28 @@
             android:layout_height="50dp">
 
             <Button
-                android:id="@+id/btnBackHome"
-                android:layout_width="70dp"
+                android:id="@+id/btnAlarm"
+                android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="8dp"
-                android:onClick="openHomeActivity"
-                android:text="@string/home" />
+                android:text="@string/alarms"/>
+
+            <Button
+                android:id="@+id/btnWeather"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="@string/weather"/>
 
             <Button
                 android:id="@+id/btnSaveProfile"
-                android:layout_width="70dp"
+                android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="8dp"
-                android:text="@string/save" />
+                android:text="@string/save"/>
+
         </FrameLayout>
 
         <FrameLayout
@@ -67,7 +74,8 @@
                 android:id="@+id/frameInputsProfile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -126,6 +134,42 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:textColor="#03A9F4" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/framePicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearPictures"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/targeturi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp" />
+
+                <!--Button to set the view-->
+                <Button
+                    android:id="@+id/btnloadImage"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="Load Image" />
+                <!--View that will be set-->
+                <ImageView
+                    android:id="@+id/targetimage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_launcher_background"/>
+
             </LinearLayout>
         </FrameLayout>
 

@@ -51,11 +51,11 @@
             android:id="@+id/alarmsBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:onClick="openAlarmScreenActivity"
-            android:text="@string/alarms"
+
+            android:text="alarm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lateBtn"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:id="@+id/snoozeBtn"
@@ -74,7 +74,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#00EAFF"
-            android:onClick="openWeather"
             android:text="Weather"
             app:layout_constraintBottom_toTopOf="@+id/onTimeBtn"
             app:layout_constraintEnd_toEndOf="parent"
