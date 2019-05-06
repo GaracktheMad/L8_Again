@@ -3,6 +3,7 @@ package com.example.myapplication.controller;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Switch;
@@ -21,9 +22,20 @@ public class AlarmPickerActivity extends AppCompatActivity {
 
         Button profileBtn = findViewById(R.id.btnProfile);
         profileBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, ProfileActivity.class)));
-
+        /*profileBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openProfileActivity();
+            }
+        });*/
         Button homeBtn = findViewById(R.id.btnHome);
         homeBtn.setOnClickListener(v -> startActivity(new Intent(AlarmPickerActivity.this, MainActivity.class)));
+        /*homeBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openMainActivity();
+            }
+        });*/
 
         TimePicker tp = findViewById(R.id.simpleTimePicker);
         tp.setIs24HourView(false);
@@ -65,6 +77,17 @@ public class AlarmPickerActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    //profileBtn()
+    public void openProfileActivity(){
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+    //homeBtn()
+    public void openMainActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
 

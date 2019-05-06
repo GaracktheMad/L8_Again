@@ -10,7 +10,6 @@ import com.example.myapplication.R;
 import com.example.myapplication.model.InvalidZipCodeException;
 
 public class ProfileActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +23,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         TextView validationTxt = findViewById(R.id.validationTextView);
 
-        Button homeBtn = findViewById(R.id.btnBackHome);
-        homeBtn.setOnClickListener(v -> startActivity(new Intent(ProfileActivity.this, MainActivity.class)));
+        Button alarmBtn = findViewById(R.id.btnAlarm);
+        alarmBtn.setOnClickListener(v -> startActivity(new Intent(ProfileActivity.this, MainActivity.class)));
+
+        Button weatherBtn = findViewById(R.id.btnWeather);
+        weatherBtn.setOnClickListener(v -> startActivity(new Intent(ProfileActivity.this, MainActivity.class)));
 
         Button saveBtn = findViewById(R.id.btnSaveProfile);
         saveBtn.setOnClickListener(v -> {
@@ -40,5 +42,6 @@ public class ProfileActivity extends AppCompatActivity {
                 validationTxt.setText("Zipcode must be in the range [0, 99999]");
             }
         });
-    }
-}
+
+    }//end onCreate()
+}//End public class

@@ -28,9 +28,21 @@ public class MainActivity extends AppCompatActivity {
 
         Button weatherBtn = findViewById(R.id.weatherBtn);
         weatherBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Weather.class)));
+        /*weatherBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openWeather();
+            }
+        });*/
 
         Button alarmsBtn = findViewById(R.id.alarmsBtn);
         alarmsBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AlarmPickerActivity.class)));
+        /*alarmsBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openAlarmPicker();
+            }
+        });*/
 
         Button snoozeBtn = findViewById(R.id.snoozeBtn);
         snoozeBtn.setOnClickListener(v -> {
@@ -64,5 +76,14 @@ public class MainActivity extends AppCompatActivity {
         pb.setProgress(Controller.me.onTimePercentage());}
     }
 
-
+    //weatherBtn()
+    public void openWeather(){
+        Intent intent = new Intent(this, Weather.class);
+        startActivity(intent);
+    }
+    //alarmsBtn()
+    public void openAlarmPicker(){
+        Intent intent = new Intent(this, Weather.class);
+        startActivity(intent);
+    }
 }
