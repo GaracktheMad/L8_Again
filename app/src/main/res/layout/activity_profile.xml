@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="controller.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="715dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/background_dark"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameButtons"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/btnAlarm"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="@string/alarms"/>
+
+            <Button
+                android:id="@+id/btnWeather"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="@string/weather"/>
+
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="8dp"
+                android:text="@string/save"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/txtHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/personalize_your_profile"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameInputs"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <LinearLayout
+                android:id="@+id/frameInputsProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@android:color/darker_gray">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txtNamePrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/please_input_the_name_you_would_like_to_be_referred_to_as"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/txtProfileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="24sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@android:color/darker_gray">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txtZipPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/please_enter_the_zip_code_you_would_like_to_get_the_weather_for"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/txtZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@android:color/background_light" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@android:color/darker_gray">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/validationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textColor="#03A9F4" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/framePicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearPictures"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/targeturi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp" />
+
+                <!--Button to set the view-->
+                <Button
+                    android:id="@+id/btnloadImage"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="Load Image" />
+                <!--View that will be set-->
+                <ImageView
+                    android:id="@+id/targetimage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_launcher_background"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
