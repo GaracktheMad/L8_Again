@@ -28,10 +28,10 @@ public class AlarmHandler extends BroadcastReceiver {
     }
 
     public boolean snooze(double onTimePercentage) {
-        if (onTimePercentage > .5) {
+        if (onTimePercentage > 50) {
             Calendar c = Calendar.getInstance();
             c.add(Calendar.MINUTE, 15);
-            am.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pi[8]);
+            am.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pi[7]);
             return true;
         } else {
             return false;

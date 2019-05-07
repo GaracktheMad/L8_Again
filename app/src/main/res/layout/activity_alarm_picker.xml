@@ -50,9 +50,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:amPmBackgroundColor="@color/colorAccent"
-                android:amPmTextColor="@android:color/background_light"
-                android:background="@color/colorPrimaryDark"
+                android:amPmTextColor="#03A9F4"
+                android:background="#2196F3"
+                android:contextClickable="false"
+                android:numbersBackgroundColor="#D4D5D6"
+                android:numbersInnerTextColor="#D4D5D6"
+                android:numbersSelectorColor="#D4D5D6"
+                android:numbersTextColor="?attr/colorBackgroundFloating"
                 android:padding="20dp"
+                android:scrollbarThumbHorizontal="@android:color/background_light"
+                android:scrollbarThumbVertical="@android:color/background_light"
                 android:timePickerMode="spinner" />
 
         </FrameLayout>
