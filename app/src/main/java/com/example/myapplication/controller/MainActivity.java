@@ -23,7 +23,8 @@ import java.io.IOException;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    private ProgressBar pb; private MediaPlayer mMediaPlayer;
+    private ProgressBar pb;
+    private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             boolean b = Controller.ah.snooze(Controller.me.onTimePercentage());
             if (b == false) {
                 startActivity(new Intent(MainActivity.this, WebMeme.class));
-            }else{
+            } else {
                 mMediaPlayer.stop();
                 finish();
             }
@@ -64,14 +65,16 @@ public class MainActivity extends AppCompatActivity {
         Button lateBtn = findViewById(R.id.lateBtn);
         lateBtn.setOnClickListener(v -> {
             Controller.me.wasLateAgain();
-            updateProgress();mMediaPlayer.stop();
+            updateProgress();
+            mMediaPlayer.stop();
             finish();
         });
 
         Button onTimeBtn = findViewById(R.id.onTimeBtn);
         onTimeBtn.setOnClickListener(v -> {
             Controller.me.wasOnTime();
-            updateProgress();mMediaPlayer.stop();
+            updateProgress();
+            mMediaPlayer.stop();
             finish();
         });
 
@@ -118,13 +121,16 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return alert;
+    }
+
     //weatherBtn()
-    public void openWeather(){
+    public void openWeather() {
         Intent intent = new Intent(this, Weather.class);
         startActivity(intent);
     }
+
     //alarmsBtn()
-    public void openAlarmPicker(){
+    public void openAlarmPicker() {
         Intent intent = new Intent(this, Weather.class);
         startActivity(intent);
     }
