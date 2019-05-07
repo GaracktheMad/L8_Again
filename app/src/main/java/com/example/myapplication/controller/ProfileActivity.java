@@ -1,6 +1,9 @@
 package com.example.myapplication.controller;
 
 import android.Manifest;
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -29,6 +32,32 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        if (Controller.firstRun == true) {
+            PendingIntent[] intents = {
+                    PendingIntent.getActivity(this, 10001,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10002,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10003,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10004,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10005,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10006,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10007,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT),
+                    PendingIntent.getActivity(this, 10008,
+                            new Intent(this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT)
+            };
+            Controller.ah = new AlarmHandler((AlarmManager) getSystemService(Activity.ALARM_SERVICE),
+                    intents);
+            Controller.firstRun = false;
+            Controller.context = getApplicationContext();
+        }
+        Controller.getState();
 
         EditText nameTxt = findViewById(R.id.txtProfileName);
         nameTxt.setText(Controller.me.getName());

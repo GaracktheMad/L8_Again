@@ -46,8 +46,8 @@ public class AlarmPickerActivity extends AppCompatActivity {
                     intents);
             Controller.firstRun = false;
             Controller.context = getApplicationContext();
-            Controller.getState();
         }
+        Controller.getState();
 
 
         Button profileBtn = findViewById(R.id.btnProfile);

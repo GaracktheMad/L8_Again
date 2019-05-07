@@ -6,8 +6,8 @@ public class User implements UsesZipcodes, Serializable {
     public Alarm alarm;
     private String name;
     private int zipCode;
-    private int successes;
-    private int total;
+    private double successes;
+    private double total;
 
     public User(String name, int zipCode) throws InvalidZipCodeException {
         this.name = name;
@@ -42,7 +42,7 @@ public class User implements UsesZipcodes, Serializable {
     }
 
     public int onTimePercentage(){
-        return (successes /total) * 100;
+        return (int) Math.ceil((successes /total) * 100);
     }
 
     public void wasLateAgain(){

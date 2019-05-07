@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        Controller.getState();
+        playSound(this, getAlarmUri());
 
         Button weatherBtn = findViewById(R.id.weatherBtn);
         weatherBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Weather.class)));
@@ -82,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         pb.setMax(100);
         updateProgress();
 
-        playSound(this, getAlarmUri());
+
     }
 
     private void updateProgress() {
