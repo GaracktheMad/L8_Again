@@ -1,4 +1,4 @@
-package com.example.myapplication.controller;
+package com.late.myapplication.controller;
 
 import android.Manifest;
 import android.app.Activity;
@@ -7,8 +7,6 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,8 +16,8 @@ import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.myapplication.R;
-import com.example.myapplication.model.InvalidZipCodeException;
+import com.late.myapplication.R;
+import com.late.myapplication.model.InvalidZipCodeException;
 
 public class ProfileActivity extends AppCompatActivity {
     //image view and button to fill image view
@@ -151,7 +149,6 @@ public class ProfileActivity extends AppCompatActivity {
         if(resultCode == RESULT_OK && requestCode == IMAGE_PICK_CODE){
             //set image to image view
             myImage.setImageURI(data.getData());
-
         }
     }
 }//End public class

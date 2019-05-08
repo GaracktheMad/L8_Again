@@ -1,4 +1,4 @@
-package com.example.myapplication.controller;
+package com.late.myapplication.controller;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 
-import com.example.myapplication.R;
+import com.late.myapplication.R;
 
 public class WebMeme extends AppCompatActivity {
 
@@ -21,6 +21,6 @@ public class WebMeme extends AppCompatActivity {
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         Button endBtn = findViewById(R.id.endBtn);
-        endBtn.setOnClickListener(v -> startActivity(new Intent(WebMeme.this, MainActivity.class)));
+        endBtn.setOnClickListener(v -> startActivity(new Intent(WebMeme.this, AlarmPickerActivity.class)));
     }
 }

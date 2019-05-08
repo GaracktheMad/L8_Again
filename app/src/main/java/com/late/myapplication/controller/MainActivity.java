@@ -1,7 +1,5 @@
-package com.example.myapplication.controller;
+package com.late.myapplication.controller;
 
-import android.app.Activity;
-import android.app.AlarmManager;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
@@ -10,17 +8,13 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
-import com.example.myapplication.R;
-import com.example.myapplication.model.InvalidZipCodeException;
-import com.example.myapplication.model.User;
+import com.late.myapplication.R;
 
 import java.io.IOException;
-import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     private ProgressBar pb;
@@ -37,29 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
         Button weatherBtn = findViewById(R.id.weatherBtn);
         weatherBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Weather.class)));
-        /*weatherBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openWeather();
-            }
-        });*/
 
         Button alarmsBtn = findViewById(R.id.alarmsBtn);
         alarmsBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AlarmPickerActivity.class)));
-        /*alarmsBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openAlarmPicker();
-            }
-        });*/
 
         Button snoozeBtn = findViewById(R.id.snoozeBtn);
         snoozeBtn.setOnClickListener(v -> {
             boolean b = Controller.ah.snooze(Controller.me.onTimePercentage());
+            mMediaPlayer.stop();
             if (b == false) {
                 startActivity(new Intent(MainActivity.this, WebMeme.class));
             } else {
-                mMediaPlayer.stop();
                 finish();
             }
         });
@@ -125,15 +107,5 @@ public class MainActivity extends AppCompatActivity {
         return alert;
     }
 
-    //weatherBtn()
-    public void openWeather() {
-        Intent intent = new Intent(this, Weather.class);
-        startActivity(intent);
-    }
 
-    //alarmsBtn()
-    public void openAlarmPicker() {
-        Intent intent = new Intent(this, Weather.class);
-        startActivity(intent);
-    }
 }

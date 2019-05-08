@@ -1,4 +1,4 @@
-package com.example.myapplication.controller;
+package com.late.myapplication.controller;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Typeface;
@@ -13,10 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myapplication.R;
-import com.example.myapplication.model.Function;
+import com.late.myapplication.R;
+import com.late.myapplication.model.Function;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 import java.text.DateFormat;
 import java.util.Date;
@@ -28,7 +27,7 @@ public class Weather extends AppCompatActivity {
     TextView selectCity, cityField, detailsField, currentTemperatureField, humidity_field, pressure_field, weatherIcon, updatedField;
     ProgressBar loader;
     Typeface weatherFont;
-    String city = "Las Vegas, US";
+    public String zip = String.valueOf(Controller.me.getZipCode());
     /* Please Put your API KEY here */
     String OPEN_WEATHER_MAP_API = "c6caf5b0f337e923a1acaf34d62d2b05";
     /* Please Put your API KEY here */
@@ -52,7 +51,7 @@ public class Weather extends AppCompatActivity {
         weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weathericons_regular_webfont.ttf");
         weatherIcon.setTypeface(weatherFont);
 
-        taskLoadUp(city);
+        taskLoadUp(zip);
 
         selectCity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +59,7 @@ public class Weather extends AppCompatActivity {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(Weather.this);
                 alertDialog.setTitle("Change City");
                 final EditText input = new EditText(Weather.this);
-                input.setText(city);
+                input.setText(zip);
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.MATCH_PARENT);
@@ -70,8 +69,8 @@ public class Weather extends AppCompatActivity {
                 alertDialog.setPositiveButton("Change",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                city = input.getText().toString();
-                                taskLoadUp(city);
+                                zip = input.getText().toString();
+                                taskLoadUp(zip);
                             }
                         });
                 alertDialog.setNegativeButton("Cancel",
@@ -106,8 +105,8 @@ public class Weather extends AppCompatActivity {
         }
 
         protected String doInBackground(String... args) {
-            String s = "http://api.openweathermap.org/data/2.5/weather?q=" + args[0] +
-                    "&units=metric&appid=" + OPEN_WEATHER_MAP_API;
+            String s = "http://api.openweathermap.org/data/2.5/weather?zip=" + args[0] +
+                    ",us&units=metric&appid=" + OPEN_WEATHER_MAP_API;
             String xml = Function.excuteGet(s);
             return xml;
         }

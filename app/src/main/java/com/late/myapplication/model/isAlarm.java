@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.late.myapplication.model;
 
 public interface isAlarm {
     default void checkHour(int hour) throws InvalidHourException {

@@ -1,4 +1,4 @@
-package com.example.myapplication.controller;
+package com.late.myapplication.controller;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-import java.time.DayOfWeek;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
@@ -33,7 +32,9 @@ public class AlarmHandler extends BroadcastReceiver {
             c.add(Calendar.MINUTE, 15);
             am.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pi[7]);
             return true;
-        } else {
+        } else { Calendar c = Calendar.getInstance();
+            c.add(Calendar.MINUTE, 3);
+            am.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pi[7]);
             return false;
         }
     }

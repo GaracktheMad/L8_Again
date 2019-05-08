@@ -1,4 +1,6 @@
-package com.example.myapplication.model;
+package com.late.myapplication.model;
+
+import android.net.Uri;
 
 import java.io.Serializable;
 
@@ -13,11 +15,13 @@ public class User implements UsesZipcodes, Serializable {
         this.name = name;
         checkZip(zipCode);
         this.zipCode = zipCode;
-        successes = 1; total = 1;
+        successes = 1;
+        total = 1;
         alarm = new Alarm();
         try {
-            alarm.setHour(5);alarm.setMinute(0);
-            boolean[] b = {false,true,true,true,true,true,false};
+            alarm.setHour(5);
+            alarm.setMinute(0);
+            boolean[] b = {false, true, true, true, true, true, false};
             alarm.setDaysOfWeek(b);
         } catch (InvalidTimeFormatException e) {
             e.printStackTrace();
@@ -41,15 +45,16 @@ public class User implements UsesZipcodes, Serializable {
         this.zipCode = zipCode;
     }
 
-    public int onTimePercentage(){
-        return (int) Math.ceil((successes /total) * 100);
+    public int onTimePercentage() {
+        return (int) Math.ceil((successes / total) * 100);
     }
 
-    public void wasLateAgain(){
+    public void wasLateAgain() {
         total++;
     }
-    public void wasOnTime(){
-        total ++;
+
+    public void wasOnTime() {
+        total++;
         successes++;
     }
 
