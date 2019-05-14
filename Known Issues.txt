@@ -1,0 +1,2 @@
+-If an alarm goes off while Sunday/Saturday are unchecked and/or on the profile screen, the lateness may not record properly.
+-Alarm trigger time may vary based on the second of the time the alarm was set. For instance an alarm set at 4:30:15 to go off at 7 will go off at 7:00:15.
